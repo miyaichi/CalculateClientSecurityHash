@@ -53,8 +53,8 @@
       <AssemblyReference>UiPath.System.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: System1のWork Itemsページに遷移します&#xD;&#xA;&#xD;&#xA;Precondition: IEでログイン済のSystem 1ページが開いている必要があります" DisplayName="System1_NavigateTo_WorkItems" sap2010:WorkflowViewState.IdRef="Sequence_1">
-    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Home" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+  <Sequence sap2010:Annotation.AnnotationText="Description: System1のWork Itemsページに遷移します&#xA;&#xA;Precondition: IEでログイン済のSystem 1ページが開いている必要があります" DisplayName="System1_NavigateTo_WorkItems" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Home" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -66,9 +66,8 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4267ba4acdb9275d66da24b6623f4bad" Selector="&lt;html title='ACME System 1 - Dashboard' /&gt;&lt;webctrl aaname='Home' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ol&amp;gt;li&amp;gt;a' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4267ba4acdb9275d66da24b6623f4bad" Selector="&lt;html title='ACME System 1 - *' /&gt;&lt;webctrl aaname='Home' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ol&amp;gt;li&amp;gt;a' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
       </ui:Click.Target>
-      <sap2010:WorkflowViewState.IdRef>Click_2</sap2010:WorkflowViewState.IdRef>
     </ui:Click>
     <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Work Items" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
       <ui:Click.CursorPosition>
@@ -85,7 +84,7 @@
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e4a3eb8516131bb3966d3c95eebe738f" Selector="&lt;html title='ACME System 1 - Dashboard' /&gt;&lt;webctrl aaname='Work Items' parentid='dashmenu' tag='BUTTON' /&gt;" WaitForReady="INTERACTIVE" />
       </ui:Click.Target>
     </ui:Click>
-    <sads:DebugSymbol.Symbol>d3JDOlxVc2Vyc1xZb3NoaWhpa28gTWl5YWljaGlcRG9jdW1lbnRzXFVpUGF0aFxDYWxjdWxhdGVDbGllbnRTZWN1cml0eUhhc2hcU3lzdGVtMVxTeXN0ZW0xX05hdmlnYXRlVG9fV29ya0l0ZW1zLnhhbWwFOANZDgIBATkFSBACAQRJBVcQAgECRZgBRcMCAgEFVZgBVZACAgED</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d3JDOlxVc2Vyc1xZb3NoaWhpa28gTWl5YWljaGlcRG9jdW1lbnRzXFVpUGF0aFxDYWxjdWxhdGVDbGllbnRTZWN1cml0eUhhc2hcU3lzdGVtMVxTeXN0ZW0xX05hdmlnYXRlVG9fV29ya0l0ZW1zLnhhbWwFOANYDgIBATkFRxACAQRIBVYQAgECRZgBRbsCAgEFVJgBVJACAgED</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -99,7 +98,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="System1_NavigateTo_WorkItems_1" sap:VirtualizedContainerService.HintSize="376,532" />
+      <sap2010:ViewStateData Id="System1_NavigateTo_WorkItems_1" sap:VirtualizedContainerService.HintSize="376,572" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

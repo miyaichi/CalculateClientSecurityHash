@@ -1,6 +1,6 @@
 {
   "name": "CalculateClientSecurityHash",
-  "description": "Robotic Enterprise Framework",
+  "description": "顧客のセキュアハッシュ算出",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.UIAutomation.Activities": "[18.3.6834.25004]",
