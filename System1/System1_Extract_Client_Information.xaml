@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>466,1067</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>802,1846</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_Extract_Client_Information_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -57,20 +57,20 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: Work Items ページからすべてのWork Itemを取得します&#xA;&#xA;Parameter:&#xA;out_ClientID (Out, String): 取得したClient ID&#xA;out_ClientName (Out, String): 取得したClient Name&#xA;out_ClientCountry (Out, String): 取得したClient Country&#xA;&#xA;Precondition: IEでSystem 1のWork Item（Type = WI5: Calculate Client Security Hash）の詳細ページが開いている必要があります" DisplayName="System1_Extract_Client_Information" sap:VirtualizedContainerService.HintSize="476,902" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Description: Work Items ページからすべてのWork Itemを取得します&#xA;&#xA;Parameter:&#xA;out_ClientID (Out, String): 取得したClient ID&#xA;out_ClientName (Out, String): 取得したClient Name&#xA;out_ClientCountry (Out, String): 取得したClient Country&#xA;&#xA;Precondition: IEでSystem 1のWork Item（Type = WI5: Calculate Client Security Hash）の詳細ページが開いている必要があります" DisplayName="System1_Extract_Client_Information" sap:VirtualizedContainerService.HintSize="556,1681" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser System1 WorkItem Detail" sap:VirtualizedContainerService.HintSize="434,663" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="4781c68edf49b7a45a91627f593493a1" Selector="&lt;html title='ACME System 1 - Work Items' /&gt;">
+    <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser System1 WorkItem Detail" sap:VirtualizedContainerService.HintSize="514,1442" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="4781c68edf49b7a45a91627f593493a1" Selector="&lt;html title='ACME System 1 - Work Items' /&gt;">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,517" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="480,1296" sap2010:WorkflowViewState.IdRef="Sequence_1">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:GenericValue" Name="ClientInformation" />
               <Variable x:TypeArguments="scg:IEnumerable(str:Match)" Name="MatchResult" />
@@ -81,7 +81,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Client Information" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+            <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Client Information" sap:VirtualizedContainerService.HintSize="438,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
               <ui:GetValue.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f38e3fc-ba55-41ce-914e-5abdba4f2f19" InformativeScreenshot="3e246787217d12a7311aaa4cf9b5e8b6" Selector="&lt;webctrl idx='1' tag='P' /&gt;" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
@@ -93,14 +93,14 @@
                 <OutArgument x:TypeArguments="ui:GenericValue">[ClientInformation]</OutArgument>
               </ui:GetValue.Value>
             </ui:GetValue>
-            <ui:Matches sap2010:Annotation.AnnotationText="Client Informationは1つの文字列として取得されるため、正規表現を使って情報を分離します" sap:VirtualizedContainerService.HintSize="334,101" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[ClientInformation]" IsBuilderTabModified="False" Pattern="Client ID: (.+)[\n\r]Client Name: (.+)[\n\r]Client Country: (.+)" RegexOption="Multiline, Compiled" Result="[MatchResult]">
+            <ui:Matches sap2010:Annotation.AnnotationText="Client Informationは1つの文字列として取得されるため、正規表現を使って情報を分離します" DisplayName="Matches Client Information Pattern" sap:VirtualizedContainerService.HintSize="438,101" sap2010:WorkflowViewState.IdRef="Matches_1" Input="[ClientInformation]" IsBuilderTabModified="False" Pattern="Client ID: (.+)[\n\r]Client Name: (.+)[\n\r]Client Country: (.+)" RegexOption="Multiline, Compiled" Result="[MatchResult]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:Matches>
-            <TryCatch sap2010:Annotation.AnnotationText="正規表現ですべての情報が取得できない場合は、System.Exception(&quot; System 1: Client Information not found&quot;)をThrowします" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <TryCatch sap2010:Annotation.AnnotationText="正規表現ですべての情報が取得できない場合は、System.Exception(&quot; System 1: Client Information not found&quot;)をThrowします" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,917" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -109,7 +109,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <TryCatch.Try>
-                <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="340,647" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[MatchResult]">
+                <ui:ForEach x:TypeArguments="str:Match" CurrentIndex="{x:Null}" DisplayName="For Each matched block" sap:VirtualizedContainerService.HintSize="340,648" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[MatchResult]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="str:Match">
                       <ActivityAction.Argument>
@@ -122,7 +122,7 @@
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign DisplayName="Assign out_ClientID" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[out_ClientID]</OutArgument>
                           </Assign.To>
@@ -130,7 +130,7 @@
                             <InArgument x:TypeArguments="x:String">[item.Groups(1).ToString.Trim]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign DisplayName="Assign out_ClientName" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[out_ClientName]</OutArgument>
                           </Assign.To>
@@ -138,7 +138,7 @@
                             <InArgument x:TypeArguments="x:String">[item.Groups(2).ToString.Trim]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign DisplayName="Assign out_ClientCountry" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:String">[out_ClientCountry]</OutArgument>
                           </Assign.To>
@@ -146,7 +146,7 @@
                             <InArgument x:TypeArguments="x:String">[item.Groups(3).ToString.Trim]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign DisplayName="Assign ExtractSuccessful" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[ExtractSuccessful]</OutArgument>
                           </Assign.To>
@@ -154,7 +154,7 @@
                             <InArgument x:TypeArguments="x:Boolean">True</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:Break sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                        <ui:Break DisplayName="Break For Each" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_1" />
                       </Sequence>
                     </ActivityAction>
                   </ui:ForEach.Body>

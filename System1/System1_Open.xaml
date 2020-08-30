@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>774,1788</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>802,2170</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>System1_Open_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -59,7 +59,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Description: System1のサイトをIEでオープンします。ログインするためのCredential(username/password)はOrchestrator Asset、Windows Credential Managerの順に検索し、見つからなければユーザーに問い合わせてWindows Credential Managerに格納します。&#xA;&#xA;Parameter:&#xA;in_System1URL (In, String): System1のサイトURL&#xA;in_System1Credential (In, String): System1にログインするためのCredential名" DisplayName="System1_Open" sap:VirtualizedContainerService.HintSize="527,1583" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="Description: System1のサイトをIEでオープンします。ログインするためのCredential(username/password)はOrchestrator Asset、Windows Credential Managerの順に検索し、見つからなければユーザーに問い合わせてWindows Credential Managerに格納します。&#xA;&#xA;Parameter:&#xA;in_System1URL (In, String): System1のサイトURL&#xA;in_System1Credential (In, String): System1にログインするためのCredential名" DisplayName="System1_Open" sap:VirtualizedContainerService.HintSize="681,2005" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="username" />
       <Variable x:TypeArguments="ss:SecureString" Name="password" />
@@ -78,19 +78,19 @@
         <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_SecurePassword">[password]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser (ACME System1)" Hidden="False" sap:VirtualizedContainerService.HintSize="485,1222" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[in_System1URL]">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser (ACME System1)" Hidden="False" sap:VirtualizedContainerService.HintSize="639,1659" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="[in_System1URL]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="418,1121" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="605,1558" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Workaround: &quot;The UiElement is no longer valid&quot;のエラーでエレメントにアクセスできなくなることがあるため、ブラウザを立ち上げてSystem1にアクセスしたときに、スーパーリロードしてキャッシュをクリアする。" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="376,188" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="f5" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="True">
+            <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="Workaround: &quot;The UiElement is no longer valid&quot;のエラーでエレメントにアクセスできなくなることがあるため、ブラウザを立ち上げてSystem1にアクセスしたときに、スーパーリロードしてキャッシュをクリアする。" ClickBeforeTyping="False" DisplayName="Send Hotkey Ctrl+F5" EmptyField="False" sap:VirtualizedContainerService.HintSize="563,188" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="f5" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="True">
               <ui:SendHotkey.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="17d33fd0-b22b-4c9a-b6eb-74ccacb2fe74" WaitForReady="INTERACTIVE">
                   <ui:Target.TimeoutMS>
@@ -106,15 +106,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:SendHotkey>
-            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="376,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
-            <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="376,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize System1 Window" sap:VirtualizedContainerService.HintSize="563,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+            <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="242,325" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Type Email" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[username]">
+              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Type Email" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" Text="[username]">
                 <ui:TypeInto.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4fbadba0-afd1-4a0e-8193-15764f052331" InformativeScreenshot="002556b48e695b0feced1c79bfc95c72" Selector="&lt;webctrl tag='INPUT' type='email' /&gt;" WaitForReady="INTERACTIVE">
                     <ui:Target.TimeoutMS>
@@ -129,7 +129,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:TypeInto>
-              <ui:TypeSecureText DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Type Password" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[password]" SendWindowMessages="False" SimulateType="False">
+              <ui:TypeSecureText DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SimulateType="{x:Null}" Activate="True" AlterIfDisabled="True" ClickBeforeTyping="False" DisplayName="Type Password" EmptyField="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeSecureText_1" SecureText="[password]" SendWindowMessages="False">
                 <ui:TypeSecureText.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1daed34f-599d-4aa5-8a57-b11072e89976" InformativeScreenshot="017741ad3d0126e90625bbb5e5d7670b" Selector="&lt;webctrl tag='INPUT' type='password' /&gt;" WaitForReady="INTERACTIVE">
                     <ui:Target.TimeoutMS>
@@ -170,7 +170,7 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:Click>
             </Sequence>
-            <Sequence DisplayName="Check Login Status" sap:VirtualizedContainerService.HintSize="563,831" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Check Login Status" sap:VirtualizedContainerService.HintSize="563,872" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -191,7 +191,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:WaitUiElementAppear>
-              <ui:UiElementExists DisplayName="Element Exists Dashboard" Exists="[LoginSuccessful]" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists sap2010:Annotation.AnnotationText="ログイン画面の表示が終わるまでに時間がかかる場合があるので、Timeoutを増やしている。" DisplayName="Element Exists Dashboard" Exists="[LoginSuccessful]" sap:VirtualizedContainerService.HintSize="521,148" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a2efa3d0-fd9b-4082-a092-aa60603b9a58" InformativeScreenshot="1920489c84434f246b28427a48c51103" Selector="&lt;webctrl idx='1' tag='H1' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
                 </ui:UiElementExists.Target>
@@ -199,10 +199,11 @@
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:UiElementExists>
-              <If Condition="[Not LoginSuccessful]" DisplayName="If login failed" sap:VirtualizedContainerService.HintSize="521,447" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[Not LoginSuccessful]" DisplayName="If login failed" sap:VirtualizedContainerService.HintSize="521,446" sap2010:WorkflowViewState.IdRef="If_1">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -216,7 +217,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="こんにちは。ユーザー名またはメールアドレスが間違っています。確認のうえ、もう一度やり直してください。よろしくお願いします" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" IsBodyHtml="False" IsDraft="False" Subject="System1 login failed" To="exceptions@acme-test.com">
+                    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="こんにちは。ユーザー名またはメールアドレスが間違っています。確認のうえ、もう一度やり直してください。よろしくお願いします" DisplayName="Send Error Mail" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" IsBodyHtml="False" IsDraft="False" Subject="System1 login failed" To="exceptions@acme-test.com">
                       <ui:SendOutlookMail.Files>
                         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                       </ui:SendOutlookMail.Files>
@@ -226,7 +227,7 @@
                 </If.Then>
               </If>
             </Sequence>
-            <Sequence DisplayName="IE: Close Notification bar" sap:VirtualizedContainerService.HintSize="376,158" sap2010:WorkflowViewState.IdRef="Sequence_9">
+            <Sequence DisplayName="IE: Close Notification bar" sap:VirtualizedContainerService.HintSize="563,158" sap2010:WorkflowViewState.IdRef="Sequence_9">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Name="Visible" />
               </Sequence.Variables>
